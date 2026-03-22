@@ -360,6 +360,24 @@ gws workflow +standup-report
 gws calendar +agenda --today --timezone America/New_York
 ```
 
+#### CLI Hints
+
+Use agtm cli hints to help both humans and agents complete `gws` commands, either interactively or directly.
+
+<details>
+<summary>Hints</summary>
+
+```shell
+# Interactive CLI mode for humans and agents: agtm run <id> <cli>
+agtm run drive # Uses hints to resolve to the gws CLI
+agtm run googleworkspace/cli drive  ## "goto" is hinted as a gws command (navigate to a URL)
+# agent mode Non Interactive Hints
+agtm run googleworkspace/cli sheets --mode agent ## agent mode return hints for similar commands of keyword "sheets"
+```
+
+</details>
+
+
 ### Model Armor (Response Sanitization)
 
 Integrate [Google Cloud Model Armor](https://cloud.google.com/security/products/model-armor) to scan API responses for prompt injection before they reach your agent.
