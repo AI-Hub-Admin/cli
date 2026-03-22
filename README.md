@@ -369,10 +369,11 @@ Use agtm cli hints to help both humans and agents complete `gws` commands, eithe
 
 ```shell
 # Interactive CLI mode for humans and agents: agtm run <id> <cli>
-agtm run drive # Use hints to resolve 'drive' related gws CLI
+# Use hints to resolve 'drive' related gws CLI
+agtm run drive 
 agtm run googleworkspace/cli drive  
-# agent mode Non Interactive Hints
-agtm run googleworkspace/cli sheets --mode agent ## agent mode return hints for similar commands of keyword "sheets"
+# agent mode Non Interactive Hints of keyword "sheets"
+agtm run googleworkspace/cli sheets --mode agent
 ```
 
 </details>
